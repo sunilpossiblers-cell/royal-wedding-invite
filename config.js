@@ -6,19 +6,19 @@
 window.WEDDING_CONFIG = {
 
   couple: {
-    groom: "Mrigank",
-    bride: "Mishi",
-    groomFull: "Mrigank Singh Rathore",
-    brideFull: "Mishi Agarwal",
-    monogram: "M · M",           // shown in the wax seal + header
+    groom: "Tushar",
+    bride: "Tushari",
+    groomFull: "Tushar Garg",
+    brideFull: "Tushari Singh",
+    monogram: "T · T",           // shown in the wax seal + header
     tagline: "Two souls, one sacred fire",
   },
 
-  // Main wedding moment — drives the live countdown
+  // Main sagai moment — drives the live countdown
   wedding: {
-    dateISO: "2026-11-26T19:08:00+05:30",   // muhurat time
-    dateDisplay: "Thursday, 26 November 2026",
-    muhurat: "Shubh Muhurat · 7:08 PM",
+    dateISO: "2026-12-13T19:08:00+05:30",   // muhurat time
+    dateDisplay: "Sunday, 13 Dec Dec 2026",
+    muhurat: "Shubh Muhurat · 8:08 PM",
   },
 
   // The celebrations — rendered in order
