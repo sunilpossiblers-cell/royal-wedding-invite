@@ -689,7 +689,7 @@ const petals = (() => {
   const upd = () => {
     let ms = tgt - Date.now();
     if (ms <= 0) {
-      $("#countdown").innerHTML = `<p class="countdown-complete">॥ शुभ विवाह ॥ Today, forever begins.</p>`;
+      $("#countdown").innerHTML = `<p class="countdown-complete">॥ शुभ सगाई ॥ Today, a beautiful beginning.</p>`;
       clearInterval(iv);
       return;
     }
@@ -705,6 +705,7 @@ const petals = (() => {
 /* ═══════════════ EVENT CARDS ═════════════════════════════ */
 (() => {
   const ICONS = {
+    engagement: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="12" r="6.5"/><circle cx="15" cy="12" r="6.5"/><path d="M9 5.5 15 18.5M15 5.5 9 18.5" opacity=".55"/></svg>',
     haldi: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4 13h16c0 3.5-2.5 7-8 7s-8-3.5-8-7z"/><path d="M12 10c0-2.4 1.8-3.2 1.8-5M9 10c0-1.7 1.2-2.3 1.2-3.8M15 10c0-1.7 1.2-2.3 1.2-3.8"/></svg>`,
     sangeet: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M9 18V6l10-2v11"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="16.5" cy="15" r="2.5"/></svg>`,
     wedding: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M12 3c2.8 3.2 5 5.9 5 9a5 5 0 0 1-10 0c0-3.1 2.2-5.8 5-9z"/><path d="M12 21v-4"/><path d="M7 21h10"/></svg>`,
@@ -1099,9 +1100,15 @@ const decor = (() => {
   $("#venue-address").textContent = CFG.venue.address;
   const mapsHref = "https://www.google.com/maps/search/?api=1&query=" +
     encodeURIComponent(CFG.venue.mapsQuery);
-  $("#maps-btn").href = mapsHref;
+  const mapsBtn = $("#maps-btn");
+  const hasMapsLocation = !!CFG.venue.mapsQuery;
+  mapsBtn.href = mapsHref;
+  mapsBtn.classList.toggle("hidden", !hasMapsLocation);
   const mapLink = $("#map-link");
-  if (mapLink) mapLink.href = mapsHref;
+  if (mapLink) {
+    mapLink.href = mapsHref;
+    mapLink.classList.toggle("hidden", !hasMapsLocation);
+  }
   $("#rsvp-deadline").textContent = CFG.rsvp.deadline;
 
   const modal = $("#rsvp-modal"), slot = $("#rsvp-frame-slot");
@@ -1114,7 +1121,7 @@ const decor = (() => {
       const f = document.createElement("iframe");
       f.src = CFG.rsvp.formUrl;
       f.loading = "lazy";
-      f.title = "Wedding RSVP form";
+      f.title = "Engagement RSVP form";
       slot.appendChild(f);
       return;
     }

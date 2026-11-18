@@ -6,82 +6,51 @@
 window.WEDDING_CONFIG = {
 
   couple: {
-    groom: "Tushar",
-    bride: "Tushari",
+   groom: "Tushar",
+   bride: "Tushari",
     groomFull: "Tushar Garg",
-    brideFull: "Tushari Singh",
+    brideFull: "Tushari Garg",
     monogram: "T · T",           // shown in the wax seal + header
-    tagline: "Two souls, one sacred fire",
+    tagline: "Two hearts · One promise · A beautiful beginning",
   },
 
-  // Main sagai moment — drives the live countdown
+  // Engagement moment — drives the live countdown
   wedding: {
-    dateISO: "2026-12-13T19:08:00+05:30",   // muhurat time
-    dateDisplay: "Sunday, 13 Dec Dec 2026",
-    muhurat: "Shubh Muhurat · 8:08 PM",
+    dateISO: "2026-12-13T20:00:00+05:30",
+    dateDisplay: "Sunday, 13 December 2026",
+    muhurat: "Engagement celebration · 8:00 PM",
   },
 
-  // The celebrations — rendered in order
+  // This invitation is for one event only: the engagement.
   events: [
     {
-      id: "haldi",
-      name: "Haldi",
-      icon: "haldi",                    // haldi | sangeet | wedding | reception
-      date: "Tue, 24 Nov 2026",
-      time: "10:00 AM onwards",
-      venue: "Rani Bagh Courtyard",
-      line: "Turmeric, laughter and golden blessings",
+      id: "engagement",
+      name: "Engagement",
+      icon: "engagement",
+      date: "Sunday, 13 December 2026",
+      time: "8:00 PM",
+      venue: "Venue details to be shared soon",
+      line: "Join us as we celebrate the beginning of our next chapter",
       accent: "#D99A2B",
-    },
-    {
-      id: "sangeet",
-      name: "Sangeet",
-      icon: "sangeet",
-      date: "Tue, 24 Nov 2026",
-      time: "7:00 PM onwards",
-      venue: "Sheesh Mahal Lawns",
-      line: "A night of music, dance and dazzle",
-      accent: "#5B3A8E",
-    },
-    {
-      id: "wedding",
-      name: "The Wedding",
-      icon: "wedding",
-      date: "Thu, 26 Nov 2026",
-      time: "Baraat 5:30 PM · Pheras 7:08 PM",
-      venue: "The Royal Palace Gardens",
-      line: "Seven vows around the sacred fire",
-      accent: "#7A1F3D",
-    },
-    {
-      id: "reception",
-      name: "Reception",
-      icon: "reception",
-      date: "Fri, 27 Nov 2026",
-      time: "7:30 PM onwards",
-      venue: "Durbar Hall",
-      line: "An evening of royal festivity",
-      accent: "#B08A3E",
     },
   ],
 
   venue: {
-    name: "The Royal Palace Gardens",
-    address: "Lake Pichola Road, Udaipur, Rajasthan 313001",
-    // What gets searched when a guest taps "Open in Maps"
-    mapsQuery: "The Oberoi Udaivilas, Udaipur",
+    name: "Venue details to be shared soon",
+    address: "",
+    mapsQuery: "",
   },
 
   rsvp: {
     // Replace with the couple's real Google Form (use the /viewform link)
     formUrl: "https://docs.google.com/forms/d/e/1FAIpQLSe_PLACEHOLDER/viewform?embedded=true",
-    deadline: "Please respond by 1 November 2026",
+    deadline: "Please let us know if you can join us",
   },
 
   // Scratch-card hidden message
   scratch: {
-    heading: "A little secret, just for you",
-    message: "You hold a special place in our story — join us for a private family dinner on the 25th. Shhh! 🤫",
+    heading: "A little note, just for you",
+    message: "Your presence and blessings will make our engagement celebration even more special.",
   },
 
   // Theme — the royal palette (matches the origami film)
